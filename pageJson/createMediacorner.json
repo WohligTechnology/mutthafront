@@ -1,33 +1,40 @@
 {
-    "title": "Create Clients",
-    "jsonPage": "viewClients",
+    "title": "Create Mediacorner",
+    "jsonPage": "viewMediacorner",
     "desciption": "",
     "pageType": "create",
     "fields": [{
         "name": "Name",
         "type": "text",
-        "tableRef": "name",
+        "tableRef": "heading",
         "id": "input4",
         "validation": ["required", "trim", "unique"],
         "url": ""
     }, {
-        "name": "Logo",
+        "name": "Image",
         "type": "image",
-        "tableRef": "logo",
+        "tableRef": "image",
         "id": "input4",
         "validation": ["required", "trim", "unique"],
         "url": "",
         "size": "220px X 65px"
+    },{
+        "name": "Link",
+        "type": "text",
+        "tableRef": "link",
+        "id": "input4",
+        "validation": ["required", "trim", "unique"],
+        "url": ""
     }],
     "action": [{
         "name": "submit",
         "action": "submitUser"
     }, {
         "name": "cancel",
-        "stateName": "page({jsonName:'viewClients'})"
+        "stateName": "page({jsonName:'viewMediacorner'})"
     }],
 
     "apiCall": {
-        "url": "client/save"
+        "url": "media/save"
     }
 }

@@ -1,5 +1,5 @@
 {
-    "title": "All Builds",
+    "title": "All Contacts",
     "desciption": "",
     "pageType": "view",
     "urlFields": ["_id"],
@@ -8,39 +8,37 @@
         "isSort": "",
         "tableRef": "name"
     }, {
-        "name": "Logo",
+        "name": "Email",
         "isSort": "",
-        "tableRef": "logo",
-        "type": "image"
-    },{
-        "name": "Link",
+        "tableRef": "email"
+    }, {
+        "name": "Subject",
         "isSort": "",
-        "tableRef": "link"
+        "tableRef": "subject"
     }],
     "action": [{
         "name": "edit",
         "icon": "mode_edit",
         "color": "blue",
         "action": "redirect",
-        "jsonPage": "editBuild",
+        "jsonPage": "editContact",
         "fieldsToSend": ["_id"],
-        "callFindOne": "build/save"
+        "callFindOne": "contact/save"
     }, {
         "name": "delete",
         "icon": "delete",
         "color": "red",
         "action": "apiCallConfirm",
-        "title": "Delete Build",
+        "title": "Delete Contact",
         "content": "Are you sure you want to delete gallery?",
-        "api": "build/deletebuild",
+        "api": "contact/delete",
         "fieldsToSend": [{
             "name": "_id",
             "value": "_id"
         }]
     }],
     "apiCall": {
-        "url": "build/findLimited",
+        "url": "contact/findLimited",
         "params": "_id"
-    },
-    "createButtonState": "page({jsonName:'createBuild'})"
+    }
 }

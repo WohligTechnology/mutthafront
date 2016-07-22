@@ -1,40 +1,48 @@
 {
-    "title": "Edit Clients",
-    "jsonPage": "viewClients",
+    "title": "Edit Mediacorner",
+    "jsonPage": "viewMediacorner",
     "desciption": "",
     "pageType": "edit",
     "urlFields": ["_id"],
     "fields": [{
         "name": "Name",
         "type": "text",
-        "tableRef": "name",
-        "model": "name",
+        "tableRef": "heading",
+        "model": "heading",
         "id": "input4",
         "validation": ["required", "trim", "unique"],
         "url": ""
     },{
-        "name": "Logo",
+        "name": "Image",
         "type": "image",
-        "model": "logo",
-        "tableRef": "logo",
+        "model": "image",
+        "tableRef": "image",
         "id": "input4",
         "validation": ["required", "trim", "unique"],
         "url": "",
         "size": "220px X 65px"
+    },{
+        "name": "Link",
+        "type": "text",
+        "tableRef": "link",
+        "model": "link",
+        "id": "input4",
+        "validation": ["required", "trim", "unique"],
+        "url": ""
     }],
     "action": [{
         "name": "submit",
         "action": "submitUser"
     }, {
       "name": "cancel",
-      "stateName": "page({jsonName:'viewClients'})"
+      "stateName": "page({jsonName:'viewMediacorner'})"
     }],
     "apiCall": {
-        "url": "client/save",
+        "url": "media/save",
         "params": "_id"
     },
     "preApi": {
-        "url": "client/getOne",
+        "url": "media/getOne",
         "params": "_id"
     }
 

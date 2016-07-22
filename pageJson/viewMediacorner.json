@@ -1,43 +1,47 @@
 {
-	"title": "All Clients",
+	"title": "All Media Corner",
 	"desciption": "",
 	"pageType": "view",
 	"urlFields": ["_id"],
 	"fields": [{
 		"name": "Name",
 		"isSort": "",
-		"tableRef": "name"
+		"tableRef": "heading"
 	}, {
 		"name": "Image",
 		"isSort": "",
-		"tableRef": "logo",
+		"tableRef": "image",
 		"type": "image"
+	}, {
+		"name": "Date",
+		"isSort": "",
+		"tableRef": "date",
+		"type": "date"
 	}],
 	"action": [{
 		"name": "edit",
 		"icon": "mode_edit",
 		"color": "blue",
 		"action": "redirect",
-		"jsonPage": "editClients",
+		"jsonPage": "editMediacorner",
 		"fieldsToSend": ["_id"],
-		"callFindOne": "client/save"
+		"callFindOne": "media/save"
 	}, {
 		"name": "delete",
 		"icon": "delete",
 		"color": "red",
 		"action": "apiCallConfirm",
-		"title": "Delete Clients",
+		"title": "Delete Mediacorner",
 		"content": "Are you sure you want to delete gallery?",
-		"api": "client/delete",
+		"api": "media/delete",
 		"fieldsToSend": [{
 			"name": "_id",
 			"value": "_id"
 		}]
 	}],
 	"apiCall": {
-		"url": "client/findLimited",
+		"url": "media/findLimited",
 		"params": "_id"
 	},
-	"createButtonState": "page({jsonName:'createClients'})"
-
+	"createButtonState": "page({jsonName:'createMediacorner'})"
 }

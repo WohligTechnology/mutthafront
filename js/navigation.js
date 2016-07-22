@@ -26,7 +26,7 @@ var navigationservice = angular.module('navigationservice', [])
   }, {
     name: "Get in touch",
     classis: "active",
-    link: "#/page/viewGetintouch",
+    link: "#/page/viewContact",
     subnav: []
   }
 ];
