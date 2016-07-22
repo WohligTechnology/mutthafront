@@ -1,0 +1,101 @@
+{
+    "title": "Edit Project",
+    "jsonPage": "viewProject",
+    "desciption": "",
+    "pageType": "edit",
+    "urlFields": ["_id"],
+    "fields": [{
+        "name": "Project Name",
+        "type": "text",
+        "tableRef": "projectname",
+        "model": "projectname",
+        "id": "input4",
+        "validation": ["required", "trim", "unique"],
+        "url": ""
+    }, {
+        "name": "Thumb Image",
+        "type": "image",
+        "tableRef": "thumbimage",
+        "model": "thumbimage",
+        "id": "input4",
+        "validation": ["required", "trim", "unique"],
+        "url": "",
+        "size": "421px X 232px"
+    }, {
+        "name": "Banner Image",
+        "type": "image",
+        "tableRef": "banner",
+        "model": "banner",
+        "id": "input4",
+        "validation": ["required", "trim", "unique"],
+        "url": "",
+        "size": "1920px X 1077px"
+    }, {
+        "name": "Banner Logo",
+        "type": "image",
+        "tableRef": "bannerlogo",
+        "model": "bannerlogo",
+        "id": "input4",
+        "validation": ["required", "trim", "unique"],
+        "url": "",
+        "size": "300px X 286px"
+    }, {
+        "name": "Project Desciption",
+        "type": "textarea",
+        "tableRef": "description",
+        "model": "description",
+        "id": "input4",
+        "validation": ["required", "trim", "unique"],
+        "url": ""
+    }, {
+        "name": "Design AND Features",
+        "type": "textarea",
+        "tableRef": "designFeature",
+        "model": "designFeature",
+        "id": "input4",
+        "validation": ["required", "trim", "unique"],
+        "url": ""
+    }, {
+        "name": "Technical Specifications",
+        "type": "textarea",
+        "tableRef": "specification",
+        "model": "specification",
+        "id": "input4",
+        "validation": ["required", "trim", "unique"],
+        "url": ""
+    }, {
+        "name": "Key Distances",
+        "type": "textarea",
+        "tableRef": "keyDistance",
+        "model": "keyDistance",
+        "id": "input4",
+        "validation": ["required", "trim", "unique"],
+        "url": ""
+    }, {
+        "name": "Project Images",
+        "type": "image",
+        "tableRef": "images",
+        "placeholder": "Enter Project Picture",
+        "id": "input4",
+        "validation": ["required", "trim", "unique"],
+        "url": "",
+        "model": "image",
+          "size": "374px X 374px"
+    }],
+    "action": [{
+        "name": "submit",
+        "action": "submitUser"
+    }, {
+      "name": "cancel",
+      "stateName": "page({jsonName:'viewProject'})"
+    }],
+    "apiCall": {
+        "url": "project/save",
+        "params": "_id"
+    },
+    "preApi": {
+        "url": "project/getOne",
+        "params": "_id"
+    }
+
+}

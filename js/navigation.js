@@ -14,9 +14,9 @@ var navigationservice = angular.module('navigationservice', [])
     link: "#/page/viewClients",
     subnav: []
   }, {
-    name: "Build",
+    name: "Projects",
     classis: "active",
-    link: "#/page/viewBuild",
+    link: "#/page/viewProject",
     subnav: []
   }, {
     name: "Media Corner",

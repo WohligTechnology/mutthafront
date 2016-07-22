@@ -61,10 +61,19 @@
                 <label for="">{{field.name}}</label>
                 <!-- <img ng-src="{{field.image|uploadpath}}"> -->
                   <span style="float: right;">{{field.size}}</span>
-                <upload-image ng-model="field.model" no-view></upload-image>
+                  <div ng-if="field.option=='multiple'">
+                <upload-image ng-model="field.model" no-view multiple></upload-image>
+                <div class="" ng-repeat="img in field.model" ng-if="field.model">
+                  <img ng-src="{{img | uploadpath:250:250:'fill'}}" ng-if="img" />
+                </div>
+              </div>
+                  <div ng-if="field.option=='single'">
+                      <upload-image ng-model="field.model" no-view></upload-image>
                 <div class="img-holder-big">
                     <img ng-src="{{field.model | uploadpath:250:250:'fill'}}" ng-if="field.model" />
                 </div>
+              </div>
+
             </div>
             <div ng-if="field.type=='chips'" ng-init="field.model=[]">
                 <label for="">{{field.name}}</label>
