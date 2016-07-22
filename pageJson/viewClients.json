@@ -1,5 +1,5 @@
 {
-    "title": "All Builds",
+    "title": "All Clients",
     "desciption": "",
     "pageType": "view",
     "urlFields": ["_id"],
@@ -8,39 +8,36 @@
         "isSort": "",
         "tableRef": "name"
     }, {
-        "name": "Logo",
+        "name": "Image",
         "isSort": "",
         "tableRef": "image",
         "type": "image"
-    },{
-        "name": "Link",
-        "isSort": "",
-        "tableRef": "link"
     }],
     "action": [{
         "name": "edit",
         "icon": "mode_edit",
         "color": "blue",
         "action": "redirect",
-        "jsonPage": "editBuild",
+        "jsonPage": "editClients",
         "fieldsToSend": ["_id"],
-        "callFindOne": "build/save"
+        "callFindOne": "client/save"
     }, {
         "name": "delete",
         "icon": "delete",
         "color": "red",
         "action": "apiCallConfirm",
-        "title": "Delete Build",
+        "title": "Delete ClientstheScenes",
         "content": "Are you sure you want to delete gallery?",
-        "api": "build/deletebuild",
+        "api": "client/deleteclient",
         "fieldsToSend": [{
             "name": "_id",
             "value": "_id"
         }]
     }],
     "apiCall": {
-        "url": "build/findLimited",
+        "url": "client/findLimited",
         "params": "_id"
     },
-    "createButtonState": "page({jsonName:'createBuild'})",
+    "createButtonState": "page({jsonName:'createClients'})",
+
 }
