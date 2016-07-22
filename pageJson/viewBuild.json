@@ -1,0 +1,68 @@
+{
+    "title": "All Movies",
+    "desciption": "",
+    "pageType": "view",
+    "fields": [{
+            "name": "Name",
+            "isSort": "",
+            "tableRef": "name"
+        }, {
+            "name": "Banner",
+            "isSort": "",
+            "tableRef": "bigImage",
+            "type":"image"
+        }, {
+            "name": "Image",
+            "isSort": "",
+            "tableRef": "smallImage",
+            "type":"image"
+        }
+
+    ],
+    "action": [{
+        "name": "edit",
+        "icon": "mode_edit",
+        "color": "blue",
+        "action": "redirect",
+        "jsonPage": "editMovie",
+        "fieldsToSend": ["_id"],
+        "callFindOne": "movie/getOne"
+    }, {
+        "name": "delete",
+        "icon": "delete",
+        "color": "red",
+        "action": "apiCallConfirm",
+        "title": "Delete User",
+        "content": "Are you sure you want to delete movie?",
+        "api": "movie/delete",
+        "fieldsToSend": [{
+            "name": "_id",
+            "value": "_id"
+        }]
+    }],
+    "button": [{
+        "name": "excelexport",
+        "icon": "print",
+        "color": "blue",
+        "action": "excelexport"
+    }, {
+        "name": "uploadcsv",
+        "icon": "delete",
+        "color": "red",
+        "action": "uploadcsv"
+    }],
+    "filter": [{
+        "name": "category",
+        "url": "http://chaitalee.com/expertuser/getAll"
+    }, {
+        "name": "uploadcsv",
+        "icon": "delete",
+        "color": "red",
+        "action": "uploadcsv"
+    }],
+    "apiCall": {
+        "url": "movie/findLimited",
+        "params": ""
+    },
+    "createButtonState": "page({jsonName:'createMovie'})"
+}
