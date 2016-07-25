@@ -12,22 +12,31 @@
         "id": "input4",
         "validation": ["required", "trim", "unique"],
         "url": ""
-    },{
+    }, {
         "name": "Logo",
         "type": "image",
         "model": "logo",
         "tableRef": "logo",
+        "option": "single",
         "id": "input4",
         "validation": ["required", "trim", "unique"],
         "url": "",
         "size": "220px X 65px"
+    }, {
+        "name": "Order",
+        "type": "text",
+        "model": "order",
+        "tableRef": "order",
+        "id": "input4",
+        "validation": ["required", "trim", "unique"],
+        "url": ""
     }],
     "action": [{
         "name": "submit",
         "action": "submitUser"
     }, {
-      "name": "cancel",
-      "stateName": "page({jsonName:'viewClients'})"
+        "name": "cancel",
+        "stateName": "page({jsonName:'viewClients'})"
     }],
     "apiCall": {
         "url": "client/save",

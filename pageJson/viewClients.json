@@ -12,6 +12,10 @@
 		"isSort": "",
 		"tableRef": "logo",
 		"type": "image"
+	},{
+		"name": "Order",
+		"isSort": "",
+		"tableRef": "order"
 	}],
 	"action": [{
 		"name": "edit",

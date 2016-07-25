@@ -51,7 +51,7 @@
         "validation": ["required", "trim", "unique"],
         "url": ""
     }, {
-        "name": "Design AND Features",
+        "name": "Design and Features",
         "type": "textarea",
         "tableRef": "designFeature",
         "model": "designFeature",
