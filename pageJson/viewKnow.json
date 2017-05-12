@@ -40,7 +40,7 @@
         }]
     }],
     "apiCall": {
-        "url": "know/getAllknow",
-        "params": ""
+        "url": "know/findLimited",
+        "params": "_id"
     }
 }

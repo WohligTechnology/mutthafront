@@ -45,7 +45,7 @@
         }]
     }],
     "apiCall": {
-        "url": "Management/getAllManagement",
-        "params": ""
+        "url": "Management/findLimited",
+        "params": "_id"
     }
 }
