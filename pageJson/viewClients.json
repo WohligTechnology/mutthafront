@@ -28,7 +28,7 @@
 		"action": "redirect",
 		"jsonPage": "editClients",
 		"fieldsToSend": ["_id"],
-		"callFindOne": "client/save"
+		"callFindOne": "client/getOne"
 	}, {
 		"name": "delete",
 		"icon": "delete",

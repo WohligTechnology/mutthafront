@@ -27,7 +27,7 @@
         "action": "redirect",
         "jsonPage": "editGetInTouchProject",
         "fieldsToSend": ["_id"],
-        "callFindOne": "GetInTouchProject/save"
+        "callFindOne": "GetInTouchProject/getOne"
     }, {
         "name": "delete",
         "icon": "delete",

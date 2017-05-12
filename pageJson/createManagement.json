@@ -1,0 +1,58 @@
+{
+    "title": "Create Management",
+    "jsonPage": "viewManagement",
+    "desciption": "",
+    "pageType": "create",
+    "fields": [{
+        "name": "Name",
+        "type": "text",
+        "tableRef": "name",
+        "id": "name",
+        "validation": ["required", "trim", "unique"],
+        "url": ""
+    }, {
+        "name": "Image",
+        "type": "image",
+        "tableRef": "image",
+        "id": "image",
+        "validation": ["required", "trim", ""],
+        "url": ""
+    }, {
+        "name": "Description",
+        "type": "textarea",
+        "tableRef": "description",
+        "id": "desc",
+        "validation": ["required", "trim", ""],
+        "url": ""
+    }, {
+        "name": "Order",
+        "type": "number",
+        "tableRef": "order",
+        "id": "order",
+        "validation": ["required", "trim", "unique"],
+        "url": ""
+    }, {
+        "name": "Status",
+        "type": "tags",
+        "tableRef": "status",
+        "placeholder": "Select Status",
+        "id": "status",
+        "validation": ["required", "trim"],
+        "url": "",
+        "dropDownField": "",
+        "dropDownType": "single",
+        "onView": true,
+        "dropDown": ["Enabled", "Disabled"]
+    }],
+    "action": [{
+        "name": "submit",
+        "action": "submitManagement"
+    }, {
+        "name": "cancel",
+        "stateName": "page({jsonName:'viewManagement'})"
+    }],
+
+    "apiCall": {
+        "url": "Management/save"
+    }
+}

@@ -24,7 +24,7 @@
         "action": "redirect",
         "jsonPage": "editProject",
         "fieldsToSend": ["_id"],
-        "callFindOne": "project/save"
+        "callFindOne": "project/getOne"
     }, {
         "name": "delete",
         "icon": "delete",

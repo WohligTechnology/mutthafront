@@ -1,23 +1,26 @@
 {
-    "title": "All Contacts",
+    "title": "All Management",
     "desciption": "",
     "pageType": "view",
-    "urlFields": ["_id"],
+    "sendIdWithCreate": true,
     "fields": [{
         "name": "Name",
         "isSort": "",
         "tableRef": "name"
     }, {
-        "name": "Email",
+        "name": "Image",
         "isSort": "",
-        "tableRef": "email"
+        "type": "image",
+        "tableRef": "image"
     }, {
-        "name": "Subject",
+        "name": "Order",
         "isSort": "",
-        "tableRef": "subject"
+        "type": "text",
+        "tableRef": "order"
     }, {
         "name": "Status",
         "isSort": "",
+        "type": "text",
         "tableRef": "status"
     }],
     "action": [{
@@ -25,24 +28,24 @@
         "icon": "mode_edit",
         "color": "blue",
         "action": "redirect",
-        "jsonPage": "editContact",
+        "jsonPage": "editManagement",
         "fieldsToSend": ["_id"],
-        "callFindOne": "contact/getOne"
+        "callFindOne": "Management/getOneManagement"
     }, {
         "name": "delete",
         "icon": "delete",
         "color": "red",
         "action": "apiCallConfirm",
-        "title": "Delete Contact",
-        "content": "Are you sure you want to delete gallery?",
-        "api": "contact/delete",
+        "title": "Delete Management",
+        "content": "Are you sure you want to delete Management?",
+        "api": "Management/deleteManagement",
         "fieldsToSend": [{
             "name": "_id",
             "value": "_id"
         }]
     }],
     "apiCall": {
-        "url": "contact/findLimited",
-        "params": "_id"
+        "url": "Management/getAllManagement",
+        "params": ""
     }
 }

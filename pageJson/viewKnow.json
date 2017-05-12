@@ -1,8 +1,8 @@
 {
-    "title": "All Builds",
+    "title": "All know",
     "desciption": "",
     "pageType": "view",
-    "urlFields": ["_id"],
+    "sendIdWithCreate": true,
     "fields": [{
         "name": "Title",
         "isSort": "",
@@ -10,33 +10,37 @@
     }, {
         "name": "Banner",
         "isSort": "",
-        "tableRef": "banner",
-        "type": "image"
+        "type": "image",
+        "tableRef": "banner"
+    }, {
+        "name": "Status",
+        "isSort": "",
+        "type": "text",
+        "tableRef": "status"
     }],
     "action": [{
         "name": "edit",
         "icon": "mode_edit",
         "color": "blue",
         "action": "redirect",
-        "jsonPage": "editBuild",
+        "jsonPage": "editknow",
         "fieldsToSend": ["_id"],
-        "callFindOne": "Build/getOne"
+        "callFindOne": "know/getOneknow"
     }, {
         "name": "delete",
         "icon": "delete",
         "color": "red",
         "action": "apiCallConfirm",
-        "title": "Delete Build",
-        "content": "Are you sure you want to delete gallery?",
-        "api": "Build/deletebuild",
+        "title": "Delete know",
+        "content": "Are you sure you want to delete know?",
+        "api": "know/deleteknow",
         "fieldsToSend": [{
             "name": "_id",
             "value": "_id"
         }]
     }],
     "apiCall": {
-        "url": "build/findLimited",
-        "params": "_id"
-    },
-    "createButtonState": "page({jsonName:'createBuild'})"
+        "url": "know/getAllknow",
+        "params": ""
+    }
 }

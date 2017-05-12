@@ -25,7 +25,7 @@
 		"action": "redirect",
 		"jsonPage": "editMediacorner",
 		"fieldsToSend": ["_id"],
-		"callFindOne": "media/save"
+		"callFindOne": "media/getOne"
 	}, {
 		"name": "delete",
 		"icon": "delete",

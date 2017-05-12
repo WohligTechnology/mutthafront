@@ -1,6 +1,6 @@
 //var adminurl = "http://104.154.58.212:82/";
-// var adminurl = "http://localhost:8080/";
-var adminurl = "http://104.155.129.33:94/";
+var adminurl = "http://localhost:1337/";
+// var adminurl = "http://104.155.129.33:94/";
 var imgpath = adminurl + "upload/readFile";
 var uploadurl = adminurl + "upload/";
 // var imgpath = imgurl + "readFile";
@@ -23,9 +23,29 @@ var navigationservice = angular.module('navigationservice', [])
       link: "#/page/viewMediacorner",
       subnav: []
     }, {
+      name: "Build",
+      classis: "active",
+      link: "#/page/viewBuild",
+      subnav: []
+    }, {
       name: "Get in touch",
       classis: "active",
+      link: "#/page/viewGetInTouchProject",
+      subnav: []
+    }, {
+      name: "Contact Us",
+      classis: "active",
       link: "#/page/viewContact",
+      subnav: []
+    }, {
+      name: "Subscribe",
+      classis: "active",
+      link: "#/page/viewSubscribe",
+      subnav: []
+    }, {
+      name: "Management",
+      classis: "active",
+      link: "#/page/viewManagement",
       subnav: []
     }];
 

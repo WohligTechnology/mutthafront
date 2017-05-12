@@ -19,7 +19,7 @@
         "action": "redirect",
         "jsonPage": "editSubscribe",
         "fieldsToSend": ["_id"],
-        "callFindOne": "Subscribe/save"
+        "callFindOne": "Subscribe/getOne"
     }, {
         "name": "delete",
         "icon": "delete",
