@@ -1,5 +1,5 @@
 {
-    "title": "All Contacts",
+    "title": "All Get In Touch Projects",
     "desciption": "",
     "pageType": "view",
     "urlFields": ["_id"],
@@ -12,9 +12,9 @@
         "isSort": "",
         "tableRef": "email"
     }, {
-        "name": "Subject",
+        "name": "Project",
         "isSort": "",
-        "tableRef": "subject"
+        "tableRef": "project.name"
     }, {
         "name": "Status",
         "isSort": "",
@@ -25,24 +25,24 @@
         "icon": "mode_edit",
         "color": "blue",
         "action": "redirect",
-        "jsonPage": "editContact",
+        "jsonPage": "editGetInTouchProject",
         "fieldsToSend": ["_id"],
-        "callFindOne": "contact/save"
+        "callFindOne": "GetInTouchProject/save"
     }, {
         "name": "delete",
         "icon": "delete",
         "color": "red",
         "action": "apiCallConfirm",
-        "title": "Delete Contact",
+        "title": "Delete GetInTouchProject",
         "content": "Are you sure you want to delete gallery?",
-        "api": "contact/delete",
+        "api": "GetInTouchProject/delete",
         "fieldsToSend": [{
             "name": "_id",
             "value": "_id"
         }]
     }],
     "apiCall": {
-        "url": "contact/findLimited",
+        "url": "GetInTouchProject/findLimited",
         "params": "_id"
     }
 }

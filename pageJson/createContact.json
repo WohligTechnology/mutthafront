@@ -1,9 +1,8 @@
 {
-    "title": "Edit Contact",
+    "title": "Create Contact",
     "jsonPage": "viewContact",
     "desciption": "",
-    "pageType": "edit",
-    "urlFields": ["_id"],
+    "pageType": "create",
     "fields": [{
         "name": "Name",
         "type": "text",
@@ -52,13 +51,8 @@
         "name": "cancel",
         "stateName": "page({jsonName:'viewContact'})"
     }],
-    "apiCall": {
-        "url": "contact/save",
-        "params": "_id"
-    },
-    "preApi": {
-        "url": "contact/getOne",
-        "params": "_id"
-    }
 
+    "apiCall": {
+        "url": "Contact/save"
+    }
 }

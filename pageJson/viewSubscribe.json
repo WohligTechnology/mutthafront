@@ -1,20 +1,12 @@
 {
-    "title": "All Contacts",
+    "title": "All Subscribe",
     "desciption": "",
     "pageType": "view",
     "urlFields": ["_id"],
     "fields": [{
-        "name": "Name",
-        "isSort": "",
-        "tableRef": "name"
-    }, {
         "name": "Email",
         "isSort": "",
         "tableRef": "email"
-    }, {
-        "name": "Subject",
-        "isSort": "",
-        "tableRef": "subject"
     }, {
         "name": "Status",
         "isSort": "",
@@ -25,24 +17,24 @@
         "icon": "mode_edit",
         "color": "blue",
         "action": "redirect",
-        "jsonPage": "editContact",
+        "jsonPage": "editSubscribe",
         "fieldsToSend": ["_id"],
-        "callFindOne": "contact/save"
+        "callFindOne": "Subscribe/save"
     }, {
         "name": "delete",
         "icon": "delete",
         "color": "red",
         "action": "apiCallConfirm",
-        "title": "Delete Contact",
+        "title": "Delete Subscribe",
         "content": "Are you sure you want to delete gallery?",
-        "api": "contact/delete",
+        "api": "Subscribe/delete",
         "fieldsToSend": [{
             "name": "_id",
             "value": "_id"
         }]
     }],
     "apiCall": {
-        "url": "contact/findLimited",
+        "url": "Subscribe/findLimited",
         "params": "_id"
     }
 }

@@ -5,44 +5,42 @@
     "pageType": "edit",
     "urlFields": ["_id"],
     "fields": [{
-        "name": "Name",
+        "name": "Title",
         "type": "text",
-        "tableRef": "name",
-        "model": "name",
-        "id": "input4",
+        "tableRef": "title",
+        "id": "title",
         "validation": ["required", "trim", "unique"],
         "url": ""
-    },{
-        "name": "Logo",
+    }, {
+        "name": "Banner",
         "type": "image",
-        "model": "logo",
-        "tableRef": "logo",
-        "id": "input4",
+        "tableRef": "banner",
+        "id": "banner",
         "validation": ["required", "trim", "unique"],
         "url": "",
+        "view": true,
         "size": "220px X 65px"
-    },{
-        "name": "Link",
-        "type": "text",
-        "tableRef": "link",
-        "model": "link",
-        "id": "input4",
+    }, {
+        "name": "Description",
+        "type": "textarea",
+        "tableRef": "description",
+        "id": "desc",
         "validation": ["required", "trim", "unique"],
         "url": ""
     }],
     "action": [{
         "name": "submit",
-        "action": "submitUser"
+        "action": "submitBuild"
     }, {
-      "name": "cancel",
-      "stateName": "page({jsonName:'viewBuild'})"
+        "name": "cancel",
+        "stateName": "page({jsonName:'viewBuild'})"
     }],
     "apiCall": {
-        "url": "build/save",
+        "url": "Build/save",
         "params": "_id"
     },
     "preApi": {
-        "url": "build/getOne",
+        "url": "Build/getOne",
         "params": "_id"
     }
 

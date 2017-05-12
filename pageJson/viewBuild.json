@@ -4,18 +4,14 @@
     "pageType": "view",
     "urlFields": ["_id"],
     "fields": [{
-        "name": "Name",
+        "name": "Title",
         "isSort": "",
-        "tableRef": "name"
+        "tableRef": "title"
     }, {
-        "name": "Logo",
+        "name": "Banner",
         "isSort": "",
-        "tableRef": "logo",
+        "tableRef": "banner",
         "type": "image"
-    },{
-        "name": "Link",
-        "isSort": "",
-        "tableRef": "link"
     }],
     "action": [{
         "name": "edit",
@@ -24,7 +20,7 @@
         "action": "redirect",
         "jsonPage": "editBuild",
         "fieldsToSend": ["_id"],
-        "callFindOne": "build/save"
+        "callFindOne": "Build/save"
     }, {
         "name": "delete",
         "icon": "delete",
@@ -32,7 +28,7 @@
         "action": "apiCallConfirm",
         "title": "Delete Build",
         "content": "Are you sure you want to delete gallery?",
-        "api": "build/deletebuild",
+        "api": "Build/deletebuild",
         "fieldsToSend": [{
             "name": "_id",
             "value": "_id"

@@ -1,6 +1,6 @@
 {
-    "title": "Edit Contact",
-    "jsonPage": "viewContact",
+    "title": "Edit GetInTouchProject",
+    "jsonPage": "viewGetInTouchProject",
     "desciption": "",
     "pageType": "edit",
     "urlFields": ["_id"],
@@ -19,12 +19,15 @@
         "validation": ["required", "trim", ""],
         "url": ""
     }, {
-        "name": "Subject",
-        "type": "text",
-        "tableRef": "subject",
-        "id": "subject",
+        "name": "Project",
+        "type": "tags",
+        "tableRef": "project",
+        "id": "project",
         "validation": ["", "trim", ""],
-        "url": ""
+        "dropDownField": "name",
+        "dropDownType": "single",
+        "onView": true,
+        "url": "Project/search"
     }, {
         "name": "Enquiry",
         "type": "textarea",
@@ -47,17 +50,17 @@
     }],
     "action": [{
         "name": "submit",
-        "action": "submitContact"
+        "action": "submitGetInTouchProject"
     }, {
         "name": "cancel",
-        "stateName": "page({jsonName:'viewContact'})"
+        "stateName": "page({jsonName:'viewGetInTouchProject'})"
     }],
     "apiCall": {
-        "url": "contact/save",
+        "url": "GetInTouchProject/save",
         "params": "_id"
     },
     "preApi": {
-        "url": "contact/getOne",
+        "url": "GetInTouchProject/getOne",
         "params": "_id"
     }
 
