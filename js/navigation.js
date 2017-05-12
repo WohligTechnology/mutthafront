@@ -13,6 +13,11 @@ var navigationservice = angular.module('navigationservice', [])
       link: "#/page/viewClients",
       subnav: []
     }, {
+      name: "Know",
+      classis: "active",
+      link: "#/page/viewKnow",
+      subnav: []
+    }, {
       name: "Projects",
       classis: "active",
       link: "#/page/viewProject",
